@@ -69,21 +69,34 @@ cd ds-2002-capstone
 ### 3. Before running the notebook, update the following connection parameters:
 
 ```python
-# MySQL connection settings
-host_name = "localhost"
-port = "3306"
-uid = "your_mysql_username"
-pwd = "your_mysql_password"
+# --------------------------------------------------------------------------------
+# Specify MySQL Server Connection Information
+# --------------------------------------------------------------------------------
+mysql_args = {
+    "host_name" : "localhost",
+    "port" : "3306",
+    "db_name" : "chinook",
+    "conn_props" : {
+        "user" : "your_mysql_username",
+        "password" : "your_mysql_password",
+        "driver" : "com.mysql.cj.jdbc.Driver"
+    }
+}
 
-# MongoDB connection settings
+# --------------------------------------------------------------------------------
+# Specify MongoDB Cluster Connection Information
+# --------------------------------------------------------------------------------
 mongodb_args = {
+    "cluster_location" : "atlas", # or "local" if running MongoDB locally
     "user_name" : "your_mongodb_username",
     "password" : "your_mongodb_password",
     "cluster_name" : "your_cluster_name",
     "cluster_subnet" : "your_cluster_subnet",
-    "cluster_location" : "atlas",  # or "local" if running MongoDB locally
-    "db_name" : "chinook"
+    "db_name" : "chinook",
+    "collection" : "",
+    "null_column_threshold" : 0.5
 }
+
 ```
 
 ### 4. Run the **`chinook_data_lakehouse.ipynb`** notebook.
