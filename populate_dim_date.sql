@@ -1,4 +1,4 @@
-USE chinook_dw;
+USE chinook;
 
 DROP TABLE IF EXISTS dim_date;
 CREATE TABLE dim_date(
