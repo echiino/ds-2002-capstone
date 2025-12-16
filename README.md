@@ -27,7 +27,7 @@ The goal is to analyze music sales trends over time, specifically focusing on **
 - JSON file for `customer` data
 
 ### Relational Database (MySQL)
-- Chinook operational database created using `chinook__mysql.sql`
+- Chinook operational database created using `chinook_mysql.sql`
 - Fetched data from the `employee` table in MySQL
 - A `dim_date` table populated using a provided SQL script (`populate_dim_date.sql`)
 
