@@ -82,7 +82,7 @@ mongodb_args = {
     "cluster_name" : "your_cluster_name",
     "cluster_subnet" : "your_cluster_subnet",
     "cluster_location" : "atlas",  # or "local" if running MongoDB locally
-    "db_name" : "chinook_customer"
+    "db_name" : "chinook"
 }
 ```
 
